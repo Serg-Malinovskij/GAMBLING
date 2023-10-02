@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap");
 @font-face {
   font-family: "Futura PT";
@@ -112,6 +113,17 @@ h6 {
 */
 html {
   scroll-behavior: smooth;
+  /* ползунок скроллбара */
+}
+html ::-webkit-scrollbar {
+  width: 8px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+}
+html ::-webkit-scrollbar-thumb {
+  background-color: #478BF9;
+  border-radius: 10px;
 }
 
 body {
@@ -709,11 +721,44 @@ body._lock {
   background-color: rgba(255, 255, 255, 0.12);
   /* Bg Blur 20% */
   overflow: hidden;
+  /* Стрелки */
+}
+.blog-main__wrapper html, .blog-main__wrapper body {
+  scrollbar-width: auto; /* толщина */
+}
+.blog-main__wrapper ::-webkit-scrollbar-button:vertical:start:decrement {
+  background-color: #f6f8f4;
+}
+.blog-main__wrapper ::-webkit-scrollbar-button:vertical:end:increment {
+  background-color: #f6f8f4;
+}
+.blog-main__wrapper ::-webkit-scrollbar-button:horizontal:start:decrement {
+  background-color: #f6f8f4;
+}
+.blog-main__wrapper ::-webkit-scrollbar-button:horizontal:end:increment {
+  background-color: #f6f8f4;
 }
 .blog-main__body {
   height: 100%;
   padding: 24px;
   overflow: auto;
+  /* полоса прокрутки (скроллбар) */
+  /* подложка скроллбара */
+  /* ползунок скроллбара */
+}
+.blog-main__body ::-webkit-scrollbar {
+  width: 8px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  border-radius: 10px;
+}
+.blog-main__body ::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  height: 80%;
+}
+.blog-main__body ::-webkit-scrollbar-thumb {
+  background-color: #478BF9;
+  border-radius: 10px;
 }
 .blog-main__item {
   display: block;
